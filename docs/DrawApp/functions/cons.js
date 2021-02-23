@@ -5,6 +5,7 @@ var set = JSON.parse(consSet);
 var log = function(mess){
   console.log(mess);
   append(mess, set.color[0]);
+  window,alert(mess);
   return;
 }
 
