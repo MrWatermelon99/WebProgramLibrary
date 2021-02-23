@@ -9,3 +9,5 @@ var ctx = c.getContext("2d");
 document.getElementById("b").innerHTML = colors.Hex2Array("#FFFFFF");
 
 cons.log("hello");
+
+window.alert(cons);
