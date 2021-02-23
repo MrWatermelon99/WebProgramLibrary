@@ -11,7 +11,7 @@
     
     <script src="functions/color.js" type="text/javascript"></script>
     <script src="functions/draw.js" type="text/javascript"></script>
-    <script src="functions/console.js" type="text/javascript"></script>
+    <script src="functions/consolePocessor.js" type="text/javascript"></script>
     
   </head>
   <body>
@@ -20,12 +20,22 @@
     
     <!-- Redirect console to div -->
     <script>
-      //import functions
-      import * as consoleProc from 'functions/console.js';
-      
-      window.console = {
+      // import functions
+      import * as consoleProc from 'functions/consoleProcessor.js';
+      // easily enable or disable custom console
+      var custCons = true;
+      //variables
+      var size = 24;
+      var color = "#A6A6A6";
+      var container = "custConsole";
+      // redirect console input to the console processor
+      if(custCons){
         
-      };
+        window.console = {
+          log : consoleProc.log
+        };
+        
+      }
     </script>
     <!-- Main script -->
     <script src="main.js" type="text/javascript"></script>
