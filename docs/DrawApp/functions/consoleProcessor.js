@@ -9,9 +9,15 @@ var log = function(mess, cont, size, color){
   p.style.color = color;
   p.style.fontSize = size + "px";
   
-  cont = document.getElementById(cont);
-  cont.appendChild(p);
   
-  cont.scrollTop = cont.scrollHeight;
+  
+}
+
+function append(child, parent){
+  
+  parent = document.getElementById(parent);
+  parent.appendChild(child);
+  parent.scrollTop = parent.scrollHeight; 
+  return();
   
 }
